@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrew Nguyen, MD/PhD Candidate</title>
     
-    <!-- Google Analytics 4 (your private analytics) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX'); // Replace with your tracking ID
+        gtag('config', 'G-XXXXXXXXXX');
     </script>
     
     <style>
@@ -22,323 +22,151 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
             color: #1d1d1f;
             background: #ffffff;
             -webkit-font-smoothing: antialiased;
         }
         
-        /* Hero Section */
-        .hero {
-            min-height: 85vh;
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 80px 30px;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #f5f5f7 0%, #ffffff 100%);
         }
         
-        .hero h1 {
-            font-size: 4rem;
+        h1 {
+            font-size: 3.5rem;
             font-weight: 600;
             letter-spacing: -0.02em;
-            margin-bottom: 16px;
-            color: #1d1d1f;
-        }
-        
-        .hero .subtitle {
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: #6e6e73;
-            margin-bottom: 40px;
-        }
-        
-        .hero .description {
-            font-size: 1.1rem;
-            color: #86868b;
-            max-width: 600px;
-            margin-bottom: 50px;
-        }
-        
-        /* Navigation */
-        nav {
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid #d2d2d7;
-            z-index: 1000;
-            padding: 16px 0;
-        }
-        
-        nav ul {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            list-style: none;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        nav a {
-            text-decoration: none;
-            color: #1d1d1f;
-            font-size: 0.95rem;
-            font-weight: 400;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: #0066cc;
-        }
-        
-        /* Sections */
-        section {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 100px 40px;
-        }
-        
-        section h2 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-            letter-spacing: -0.01em;
-        }
-        
-        section h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-top: 40px;
-            margin-bottom: 12px;
-            color: #1d1d1f;
-        }
-        
-        section p {
-            font-size: 1.1rem;
-            color: #6e6e73;
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-        
-        /* Cards */
-        .card {
-            background: #f5f5f7;
-            border-radius: 18px;
-            padding: 40px;
-            margin: 30px 0;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .card h3 {
-            margin-top: 0;
-        }
-        
-        /* Publications List */
-        .publication {
-            margin: 25px 0;
-            padding-left: 20px;
-            border-left: 3px solid #0066cc;
-        }
-        
-        .publication-title {
-            font-weight: 600;
-            color: #1d1d1f;
             margin-bottom: 8px;
         }
         
-        .publication-details {
-            font-size: 0.95rem;
+        .title {
+            font-size: 1.5rem;
             color: #86868b;
+            font-weight: 400;
+            margin-bottom: 60px;
         }
         
-        /* Contact Section */
-        .contact-links {
-            display: flex;
-            gap: 30px;
-            margin-top: 40px;
-            flex-wrap: wrap;
+        .section {
+            margin-bottom: 50px;
         }
         
-        .contact-btn {
-            display: inline-block;
-            padding: 14px 32px;
-            background: #0066cc;
-            color: white;
-            text-decoration: none;
-            border-radius: 980px;
-            font-weight: 500;
-            transition: background 0.3s;
-        }
-        
-        .contact-btn:hover {
-            background: #0055b3;
-        }
-        
-        .contact-btn.secondary {
-            background: #f5f5f7;
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 16px;
             color: #1d1d1f;
         }
         
-        .contact-btn.secondary:hover {
-            background: #e8e8ed;
+        p {
+            font-size: 1.1rem;
+            color: #6e6e73;
+            line-height: 1.7;
+            margin-bottom: 16px;
         }
         
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 60px 20px;
+        .highlight {
             background: #f5f5f7;
-            color: #86868b;
-            font-size: 0.9rem;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
         }
         
-        /* Responsive */
+        .cv-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: #0071e3;
+            color: white;
+            text-decoration: none;
+            border-radius: 980px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background 0.2s;
+            margin-top: 20px;
+        }
+        
+        .cv-button:hover {
+            background: #0077ed;
+        }
+        
+        .contact {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid #d2d2d7;
+        }
+        
+        .contact a {
+            color: #0071e3;
+            text-decoration: none;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        
         @media (max-width: 768px) {
-            .hero h1 {
+            .container {
+                padding: 50px 20px;
+            }
+            
+            h1 {
                 font-size: 2.5rem;
             }
             
-            .hero .subtitle {
+            .title {
                 font-size: 1.2rem;
-            }
-            
-            section h2 {
-                font-size: 2rem;
-            }
-            
-            nav ul {
-                gap: 20px;
-                font-size: 0.85rem;
-            }
-            
-            section {
-                padding: 60px 20px;
             }
         }
     </style>
 </head>
 <body>
     
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <!-- Hero Section -->
-    <div class="hero">
+    <div class="container">
+        
         <h1>Andrew Nguyen</h1>
-        <p class="subtitle">MD/PhD Candidate</p>
-        <p class="description">
-            Medical imaging, machine learning, and computational medicine researcher applying for residency in [Your Specialty]
-        </p>
+        <p class="title">MD/PhD Candidate</p>
+        
+        <div class="section">
+            <p>
+                I'm an MD/PhD student focused on medical imaging and machine learning for early disease detection. 
+                My research uses artificial intelligence to identify novel biomarkers in lung cancer, with the goal 
+                of improving patient outcomes through earlier and more accurate diagnosis.
+            </p>
+        </div>
+        
+        <div class="highlight">
+            <h2>Research</h2>
+            <p>
+                Currently developing predictive models using perivascular adipose tissue radiomics to identify 
+                lung cancer risk. Working with large imaging datasets (31,000+ patients) funded by NIH to create 
+                automated analysis pipelines that achieve >82% accuracy in predicting malignancy.
+            </p>
+        </div>
+        
+        <div class="section">
+            <h2>Education</h2>
+            <p>
+                MD/PhD Program, [Your University]<br>
+                NIH Research Fellow | AOA Candidate
+            </p>
+        </div>
+        
+        <a href="cv.pdf" class="cv-button" download>Download CV</a>
+        
+        <div class="contact">
+            <p>
+                <strong>Email:</strong> <a href="mailto:your.email@university.edu">your.email@university.edu</a><br>
+                <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+            </p>
+        </div>
+        
     </div>
-    
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I'm an MD/PhD student passionate about leveraging artificial intelligence and medical imaging 
-            to advance early disease detection and personalized medicine. My research focuses on developing 
-            novel radiomic biomarkers for lung cancer prediction using perivascular adipose tissue analysis.
-        </p>
-        <p>
-            Currently funded through an NIH subaward, I work with large-scale medical imaging datasets to 
-            create automated segmentation pipelines and predictive models that can improve clinical outcomes.
-        </p>
-    </section>
-    
-    <!-- Research Section -->
-    <section id="research">
-        <h2>Research</h2>
-        
-        <div class="card">
-            <h3>Perivascular Adipose Tissue Radiomics</h3>
-            <p>
-                Developing automated analysis pipelines for PVAT imaging to predict lung cancer risk. 
-                Working with the AADB dataset (31,000+ patients) to identify early biomarkers of malignancy 
-                using tissue entropy and texture analysis.
-            </p>
-            <p><strong>Role:</strong> Principal Investigator | <strong>Funding:</strong> NIH Subaward</p>
-        </div>
-        
-        <div class="card">
-            <h3>Machine Learning in Medical Imaging</h3>
-            <p>
-                Implementing deep learning approaches for automated medical image segmentation and feature 
-                extraction. Achieved AUC >0.82 in predicting lung cancer malignancy using radiomic features.
-            </p>
-        </div>
-    </section>
-    
-    <!-- Publications Section -->
-    <section id="publications">
-        <h2>Publications</h2>
-        
-        <div class="publication">
-            <div class="publication-title">
-                Perivascular Adipose Tissue Entropy as a Predictive Biomarker for Lung Cancer
-            </div>
-            <div class="publication-details">
-                Nguyen A., et al. (In preparation) | High-tier journal submission
-            </div>
-        </div>
-        
-        <div class="publication">
-            <div class="publication-title">
-                Automated Radiomic Feature Extraction for Cancer Detection: A Systematic Approach
-            </div>
-            <div class="publication-details">
-                Nguyen A., et al. (In preparation)
-            </div>
-        </div>
-        
-        <!-- Add your actual publications here -->
-    </section>
-    
-    <!-- Education Section -->
-    <section id="education">
-        <h2>Education</h2>
-        
-        <h3>MD/PhD Program</h3>
-        <p>[Your Medical School] | Expected Graduation: [Year]</p>
-        <p>Focus: Medical Imaging, Machine Learning, Computational Medicine</p>
-        
-        <h3>Honors & Awards</h3>
-        <p>NIH Research Fellowship | Alpha Omega Alpha (AOA) Candidate</p>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Get in Touch</h2>
-        <p>I'm always interested in discussing research collaborations, clinical opportunities, or residency programs.</p>
-        
-        <div class="contact-links">
-            <a href="mailto:your.email@university.edu" class="contact-btn">Email Me</a>
-            <a href="your-cv.pdf" class="contact-btn secondary" download>Download CV</a>
-            <a href="https://linkedin.com/in/yourprofile" class="contact-btn secondary" target="_blank">LinkedIn</a>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Andrew Nguyen. All rights reserved.</p>
-    </footer>
     
 </body>
 </html>
